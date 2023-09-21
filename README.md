@@ -176,6 +176,13 @@ To learn more, see [Amazon MWAA Execution Role](https://docs.aws.amazon.com/mwaa
 
 - If a library is not available in the Python Package Index (PyPi.org), add the `--index-url` flag to the package in your `requirements/requirements.txt` file. To learn more, see [Managing Python dependencies in requirements.txt](https://docs.aws.amazon.com/mwaa/latest/userguide/best-practices-dependencies.html).
 
+### I have a Mac and it's not working
+
+- Please insert the below on line #24 of the dockerfile:
+```  
+RUN yum install -y libxml2-devel libxslt-devel python-devel
+```
+
 ## Troubleshooting
 
 The following section contains errors you may encounter when using the Docker container image in this repository.
